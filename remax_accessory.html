@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Handphone Accessory</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	
+	<!-- Custom CSS -->
+	<link href="css/custom.css" rel="stylesheet" type="text/css">
+	<link href="css/shop-homepage.css" rel="stylesheet">
+	
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<style>
+		body {
+			padding: 80px;
+		}
+		
+		.button {
+			background-color: #000;
+			border: none;
+			font-size: 18px;
+			transition: all 0.5s;
+			cursor: pointer;
+			
+		}
+
+		.button span {
+			cursor: pointer;
+			display: inline-block;
+			position: relative;
+			transition: 0.5s;
+		}
+
+		.button span:after {
+			content: '\00AB';
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			left: -20px;
+			transition: 0.5s;
+		}
+
+		.button:hover span {
+			padding-left: 25px;
+		}
+
+		.button:hover span:after {
+			opacity: 1;
+			left: 0;
+		}
+	</style>
+	
+</head>
+
+<body>
+
+     <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Shopping
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li  class="active">
+                        <a href="purchase.html">Purchase</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+					 <li>
+                        <a href="login.html">Log In</a>
+                    </li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle mega-dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i> 
+						</a>
+							<ul class="dropdown-menu">	
+								<li>
+									<table >
+									<h2><i>Your Shopping Cart:</i></h2>
+										<thead>
+											<tr>
+												<th>Product</th>
+												<th>Product Code</th>
+												<th>QTY</th>
+												<th>Price (RM)</th>
+												<th>Subtotal (RM)</th>
+												<th>Clear</th>
+											</tr>
+										</thead>
+																							
+										<tbody id="accessoryCart">                
+										</tbody>
+														
+										<tfoot>
+											<tr>
+												<td colspan="4">Total</td>
+												<td id="myTotal">0</td>
+												<td></td>
+											</tr>
+										</tfoot>
+									</table>
+									<div class="panel-body text-right">
+										<a href="cart.html" class="btn btn-danger btn-sm" style="color: #fff; border-radius: 10px">Checkout</a>
+									</div>
+								</li>			
+							</ul>				
+					</li>							
+				</ul> 				
+			</div>						
+		</div>					
+	</nav>
+	
+    <!-- Page Content -->
+    <div class="container">
+	<hr>
+        <div class="row">
+
+            <div class="col-md-3">
+                <p class="lead">Remax</p>
+                <div class="list-group">
+                    <a href="remax.html" class="list-group-item">Charging Cable</a>
+                    <a href="remax_powerbank.html" class="list-group-item">Power Bank</a>
+                    <a href="remax_accessory.html" class="list-group-item">Accessory</a>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+
+                <div class="row carousel-holder">
+
+                    <div class="col-md-12">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img class="slide-image" src="img/title.jpg" alt="remax">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/title2.jpg" alt="remax">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src="img/title3.jpg" alt="remax">
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left"></span>
+                            </a>
+                            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right"></span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce.jpg" alt="headset">
+                            <div class="caption">
+                                <h4 class="pull-right">$18.99</h4>
+                                <h4><a href="#">Headset</a>
+                                </h4>
+                                <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">15 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce2.jpg" alt="phone charm">
+                            <div class="caption">
+                                <h4 class="pull-right">$0.99</h4>
+                                <h4><a href="#">Phone Charm</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">12 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce3.jpg" alt="car holder">
+                            <div class="caption">
+                                <h4 class="pull-right">$6.99</h4>
+                                <h4><a href="#">Car Holder</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">31 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce.jpg" alt="headset">
+                            <div class="caption">
+                                <h4 class="pull-right">$18.99</h4>
+                                <h4><a href="#">Headset</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">6 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce2.jpg" alt="phone charm">
+                            <div class="caption">
+                                <h4 class="pull-right">$0.99</h4>
+                                <h4><a href="#">Phone Charm</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">18 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+					 <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="img/acce3.jpg" alt="car holder">
+                            <div class="caption">
+                                <h4 class="pull-right">$6.99</h4>
+                                <h4><a href="#">Car Holder</a>
+                                </h4>
+                                <p>This is a short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                            <div class="ratings">
+                                <p class="pull-right">6 reviews</p>
+                                <p>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                    <span class="glyphicon glyphicon-star-empty"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+					
+                    <div class="col-md-12">
+                        <h3><i>Like our products?</i></h3>
+                        <p>If you have any feedback, please <a href="contact.html">contact us </a> at 6836 6964 or drop us a message at <a href="#">enquiry@gmail.com</a>.</p>
+						<button class="button"><a href="purchase.html"><span>Back</span></a></button>
+					</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+  
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script>
+		function subscribeNews() {
+			document.getElementById('subscribe').submit();
+		}
+	</script>
+	
+	<!-- .footer start -->
+	<section class="footer">
+		<div class="container text-center">
+			<div class="col-md-4">
+				<h3>Join Our Newsletter</h3>
+				<form id="subscribe">
+					<input type="email" id="emailSubscribe" placeholder="Enter your email address" style="background-color:#B8B8B8; padding:15px 30px; border:1px solid #B8B8B8">
+					<input type="submit" class="btn btn-default subscribe" onclick="subscribeNews() "value="Subscribe">
+				</form>	
+			</div>
+		
+	
+	
+			<div class="col-md-4">
+				<h3>Keep Updated</h3>
+					<ul class="footer-icon">
+						<li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+			</div>
+			
+			<div class="col-md-4">
+				<h3>How To <a href="contact.html">Find Us?</a></h3>
+					<ul class="list-icon">
+						<li><i class="fa fa-map-marker"></i> One infinity loop, 54100</li>
+						<li><i class="fa fa-phone"></i> 6836 6964</li>
+						<li><i class="fa fa-envelope-o"></i><a href="#"> enquiry@gmail.com</a></li>
+					</ul>
+			</div>
+		
+		</div>	
+	</section>
+  
+    <section class="sub-footer">
+        <div class="container text-center">
+			<p>Copyright &copy; Your Website 2016</p>
+        </div>
+    </section>
+	<!-- .footer end -->
+	
+	
+</body>
+
+</html>

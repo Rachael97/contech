@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Handphone Accessory</title>
+
+	<!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	
+	<!-- Custom CSS -->
+	<link href="css/custom.css" rel="stylesheet" type="text/css">
+	
+    <!-- Theme CSS -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<style>
+		
+		fieldset {
+			border: 4px solid #42DCA3;
+			padding: 30px;
+			margin: 60px 0 60px;	
+			background-color: #fafafa;
+			color: #000;
+		}
+		
+		legend {
+			border: 2px solid #42DCA3;
+			text-align: left;
+			padding: 3px 10px;
+			width: auto;
+			background-color: #fff;
+			color: #7A7A7A;
+			
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i> <span class="light">Start</span> Shopping
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="purchase.html">Purchase</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+					 <li>
+                        <a href="login.html">Log In</a>
+                    </li>
+					
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle mega-dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="glyphicon glyphicon-shopping-cart"></i> 
+						</a>
+							<ul class="dropdown-menu">	
+								<li>
+									<table >
+									<h2><i>Your Shopping Cart:</i></h2>
+										<thead>
+											<tr>
+												<th>Product</th>
+												<th>Product Code</th>
+												<th>QTY</th>
+												<th>Price (RM)</th>
+												<th>Subtotal (RM)</th>
+												<th>Clear</th>
+											</tr>
+										</thead>
+																							
+										<tbody id="accessoryCart">                
+										</tbody>
+														
+										<tfoot>
+											<tr>
+												<td colspan="4">Total</td>
+												<td id="myTotal">0</td>
+												<td></td>
+											</tr>
+										</tfoot>
+									</table>	
+									<div class="panel-body text-right">
+										<a href="cart.html" class="btn btn-danger btn-sm" style="color: #fff; border-radius: 10px">Checkout</a>
+									</div>
+								</li>			
+							</ul>				
+					</li>							
+				</ul> 				
+			</div>						
+		</div>					
+	</nav>			
+
+		<!-- Checkout Section -->
+		<section id="checkout" class="container content-section text-center">
+				
+			<div class="container">
+				<div class="row">
+					<!-- main start -->
+					<div class="col-md-12">
+							<h1 style="text-align: left">Checkout</h1>
+							
+						<div class="container">
+							<table class="table cart" style="text-align: left">
+								<thead>
+									<tr>
+										<th>Product</th>
+										<th>Product Code</th>
+										<th>QTY</th>
+										<th>Price (RM)</th>
+										<th>Subtotal (RM)</th>
+									</tr>
+								</thead>
+								<tbody id="#">
+									<tr>
+										<td><a href="#">Iphone Cable</a></td>
+										<td>#A00001</td>
+										<td>
+											<div class="form-group">
+												<input type="text" class="form-control" style="width: 60px" value="10" disabled>
+											</div>											
+										</td>
+										<td>1.99 </td>
+										<td>199.00 </td>
+									</tr>
+									<tr>
+										<td><a href="#">Iphone Cable</a></td>
+										<td>#A00001</td>
+										<td>
+											<div class="form-group">
+												<input type="text" class="form-control" style="width: 60px" value="10" disabled>
+											</div>											
+										</td>
+										<td>1.99 </td>
+										<td>199.00 </td>
+									</tr>
+									<tr>
+										<td><a href="#">Iphone Cable</a></td>
+										<td>#A00001</td>
+										<td>
+											<div class="form-group">
+												<input type="text" class="form-control" style="width: 60px" value="10" disabled>
+											</div>											
+										</td>
+										<td>1.99 </td>
+										<td>199.00 </td>
+									</tr>
+								</tbody>
+								<tfoot  style="font-weight: 900">
+									<tr >
+										<td colspan="4" id="#">Total <span style="color: #FF887A">30</span> Items</td>
+										<td colspan="2" id="#"><span style="color: #FF887A">597.00</span></td>
+									</tr>
+								</tfoot>
+							</table>
+						</div>	
+							
+						<fieldset>	
+							<legend>Billing Information</legend>
+								<form role="form" class="form-horizontal" id="billing-information">
+								
+									<div class="row">
+										<div class="col-lg-3">
+											<h3 class="title">Personal Info</h3>
+										</div>
+										<div class="col-lg-8 col-lg-offset-1">
+											<div class="form-group">
+												<label for="billingFirstName" class="col-md-2 control-label">First Name<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingFirstName" value="First Name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingLastName" class="col-md-2 control-label">Last Name<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingLastName" value="Last Name">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingTel" class="col-md-2 control-label">Telephone<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingTel" value="Telephone">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingFax" class="col-md-2 control-label">Fax</label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingFax" value="Fax">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingemail" class="col-md-2 control-label">Email<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="email" class="form-control" id="billingemail" value="Email">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="space"></div>
+									<div class="row">
+										<div class="col-lg-3">
+											<h3 class="title">Your Address</h3>
+										</div>
+										<div class="col-lg-8 col-lg-offset-1">
+											<div class="form-group">
+												<label for="billingAddress1" class="col-md-2 control-label">Address 1<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingAddress1" value="Address 1">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingAddress2" class="col-md-2 control-label">Address 2</label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingAddress2" value="Address 2">
+												</div>
+											</div>
+											<div class="form-group">
+												<label class="col-md-2 control-label">Country<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<select class="form-control">
+														<option value="CH">China</option>
+															<option value="HK">Hong Kong</option>
+															<option value="MY" selected="selected">Malaysia</option>
+															<option value="SG">Singapore</option>
+															<option value="TW">Taiwan</option>
+													</select>
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingCity" class="col-md-2 control-label">City<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingCity" value="City">
+												</div>
+											</div>
+											<div class="form-group">
+												<label for="billingPostalCode" class="col-md-2 control-label">Zip Code<small class="text-default">*</small></label>
+												<div class="col-md-10">
+													<input type="text" class="form-control" id="billingPostalCode" value="Postal Code">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="space"></div>
+									<div class="row">
+										<div class="col-lg-3">
+											<h3 class="title">Additional Info</h3>
+										</div>
+										<div class="col-lg-8 col-lg-offset-1">
+											<div class="form-group">
+												<div class="col-md-12">
+													<textarea class="form-control" rows="4"></textarea>
+												</div>
+											</div>
+										</div>
+									</div>
+								</form>
+						</fieldset>
+							
+							
+							
+							
+							
+							
+							
+							
+							
+							
+						<fieldset>
+							<legend>Shipping Information</legend>
+								<form role="form" class="form-horizontal" id="shipping-information-container">
+									<div id="shipping-information" class="space-bottom">
+										<div class="row">
+											<div class="col-lg-3">
+												<h3 class="title">Personal Info</h3>
+											</div>
+											<div class="col-lg-8 col-lg-offset-1">
+												<div class="form-group">
+													<label for="shippingFirstName" class="col-md-2 control-label">First Name<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingFirstName" value="First Name">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingLastName" class="col-md-2 control-label">Last Name<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingLastName" value="Last Name">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingTel" class="col-md-2 control-label">Telephone<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingTel" value="Telephone">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingFax" class="col-md-2 control-label">Fax</label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingFax" value="Fax">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingemail" class="col-md-2 control-label">Email<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="email" class="form-control" id="shippingemail" value="Email">
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="space"></div>
+										<div class="row">
+											<div class="col-lg-3">
+												<h3 class="title">Your Address</h3>
+											</div>
+											<div class="col-lg-8 col-lg-offset-1">
+												<div class="form-group">
+													<label for="shippingAddress1" class="col-md-2 control-label">Address 1<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingAddress1" value="Address 1">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingAddress2" class="col-md-2 control-label">Address 2</label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingAddress2" value="Address 2">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-md-2 control-label">Country<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<select class="form-control">
+															<option value="CH">China</option>
+															<option value="HK">Hong Kong</option>
+															<option value="MY" selected="selected">Malaysia</option>
+															<option value="SG">Singapore</option>
+															<option value="TW">Taiwan</option>
+														</select>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingCity" class="col-md-2 control-label">City<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingCity" value="City">
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="shippingPostalCode" class="col-md-2 control-label">Zip Code<small class="text-default">*</small></label>
+													<div class="col-md-10">
+														<input type="text" class="form-control" id="shippingPostalCode" value="Postal Code">
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div  style="text-align:left">
+										<label>
+											<input type="checkbox" id="shipping-info-check" checked> My Shipping information is the same as my Billing information.
+										</label>
+									</div>
+								</form>
+						</fieldset>
+							
+							<div class="text-right">	
+								<a href="cart.html" class="btn btn-group btn-default"><i class="glyphicon glyphicon-menu-left"></i> Go Back To Cart</a>
+								<a href="checkout_payment.html" class="btn btn-group btn-default">Next Step <i class="glyphicon glyphicon-menu-right"></i></a>
+							</div>
+
+					</div>
+					<!-- main end -->
+
+				</div>	
+			</div>
+		</section>
+
+	<!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+	
+	<!-- Modernizr javascript -->
+	<script type="text/javascript" src="plugins/modernizr.js"></script>
+	<!-- Magnific Popup javascript -->
+	<script type="text/javascript" src="plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<!-- Appear javascript -->
+	<script type="text/javascript" src="plugins/waypoints/jquery.waypoints.min.js"></script>
+	<!-- Count To javascript -->
+	<script type="text/javascript" src="plugins/jquery.countTo.js"></script>
+	<!-- Parallax javascript -->
+	<script src="plugins/jquery.parallax-1.1.3.js"></script>
+	<script src="plugins/jquery.validate.js"></script>
+	<!-- Owl carousel javascript -->
+	<script type="text/javascript" src="plugins/owl-carousel/owl.carousel.js"></script>
+	<!-- SmoothScroll javascript -->
+	<script type="text/javascript" src="plugins/jquery.browser.js"></script>
+	<script type="text/javascript" src="plugins/SmoothScroll.js"></script>
+	<!-- Initialization of Plugins -->
+	<script type="text/javascript" src="js/template.js"></script>
+	<!-- Custom Scripts -->
+	<script type="text/javascript" src="js/custom.js"></script>
+	
+	<script>
+			
+			var cart;
+			
+			if(localStorage.accessoryCart!=null) {
+			cart = JSON.parse(localStorage.accessoryCart);
+			} else {
+				cart = [];
+			}
+			
+			var myAccessory = {};
+		
+			function addCart (title,code,price,img) {
+			//console.log(title, code, price, img);
+			
+			//define product exist or not
+				var accessoryExist = false;
+				var selectedIndex = 0;
+				
+				for (var i=0; i < cart.length; i++) {
+					if (cart[i].code == code) {
+						accessoryExist = true;
+						selectedIndex = i;
+						break;
+					}
+				}
+				
+				if (accessoryExist == true) {
+				
+					cart[selectedIndex].qty++;
+					
+				} else {
+				
+					var id = cart.length+1;
+					
+					myAccessory = {"id":id, "title":title, "code":code, "price":price, "img":img, "qty":1};
+					cart.push(myAccessory);
+				}
+			
+			console.log(cart);
+				
+			calculateTotalPrice();
+
+			$("li.dropdown").toggleClass('open');
+			
+			}
+			
+			function calculateTotalPrice() {
+			
+				var total = 0;
+				$("#accessoryCart").html('');
+				
+				for (i=0; i < cart.length; i++) {
+					subtotal = cart[i].price * cart[i].qty;
+					total += subtotal;
+				
+				var tr = "";
+				tr += '<td>' +cart[i].title+ '</td>';
+				tr += '<td>' +cart[i].code+ '</td>';
+				tr += '<td><a href="javascript:minusCart('+cart[i].id+');" class="btn btn-xs btn-danger" style="display:inline">-</a>' +cart[i].qty+ '<a href="javascript:plusCart('+cart[i].id+');" class="btn btn-xs btn-danger" style="display:inline">+</a></td>';
+				tr += '<td>' +cart[i].price+ '</td>';			
+				tr += '<td>' +subtotal+ '</td>';
+				tr += '<td><a href="javascript:deleteCart('+cart[i].id+');" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-trash"></i></a></td>';
+				
+				var trDom = $("<tr>").html(tr);
+				$ ("#accessoryCart").append(trDom);
+				
+				}
+				
+				$("#myTotal").html(total);
+				
+			localStorage.accessoryCart = JSON.stringify(cart);
+			
+			}
+			
+			function plusCart(id) {
+				for (i=0; i < cart.length; i++) {
+					if (cart[i].id == id) {
+						cart[i].qty++ ;
+					}
+				}
+				
+			calculateTotalPrice();
+			
+			}
+			
+			function minusCart(id) {
+				for (i=0; i < cart.length; i++){
+					if (cart[i].id == id) {
+						cart[i].qty-- ;
+						if (cart[i].qty <= 0){
+							deleteCart(id);
+						}
+					} 
+				}
+				
+			calculateTotalPrice();
+			
+			}
+			
+			function deleteCart(id) {
+				var tmpCart = [];
+				for (i=0; i < cart.length; i++) {
+					if (cart[i].id != id) {
+						tmpCart.push(cart[i]);
+					}
+				}
+				
+			cart = tmpCart;
+			
+			calculateTotalPrice();
+			
+			}
+			
+			calculateTotalPrice();
+			
+			$('li.dropdown a').on('click', function (event) {
+			$(this).parent().toggleClass('open');
+			});
+
+			$('body').on('click', function (e) {
+				if (!$('li.dropdown').is(e.target) 
+					&& $('li.dropdown').has(e.target).length === 0 
+					&& $('.open').has(e.target).length === 0
+				) 	{
+					$('li.dropdown').removeClass('open');
+				}
+		
+			});
+			
+			function subscribeNews() {
+				document.getElementById('subscribe').submit();
+			}
+			
+			
+	</script>
+	
+	<!-- .footer start -->
+	<section class="footer">
+		<div class="container text-center">
+			<div class="col-md-4">
+				<h3>Join Our Newsletter</h3>
+				<form id="subscribe">
+					<input type="email" id="emailSubscribe" placeholder="Enter your email address" style="background-color:#B8B8B8; padding:15px 30px; border:1px solid #B8B8B8">
+					<input type="submit" class="btn btn-default subscribe" onclick="subscribeNews() "value="Subscribe">
+				</form>	
+			</div>
+		
+	
+	
+			<div class="col-md-4">
+				<h3>Keep Updated</h3>
+					<ul class="footer-icon">
+						<li><a href="http://facebook.com/"><i class="fa fa-facebook"></i></a></li>
+						<li><a href="http://linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="http://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+						<li><a href="http://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+					</ul>
+			</div>
+			
+			<div class="col-md-4">
+				<h3>How To <a href="contact.html">Find Us?</a></h3>
+					<ul class="list-icon">
+						<li><i class="fa fa-map-marker"></i> One infinity loop, 54100</li>
+						<li><i class="fa fa-phone"></i> 6836 6964</li>
+						<li><i class="fa fa-envelope-o"></i><a href="#"> enquiry@gmail.com</a></li>
+					</ul>
+			</div>
+		
+		</div>	
+	</section>
+  
+    <section class="sub-footer">
+        <div class="container text-center">
+			<p>Copyright &copy; Your Website 2016</p>
+        </div>
+    </section>
+	<!-- .footer end -->
+   
+   
+</body>
+
+</html>

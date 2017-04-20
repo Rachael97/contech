@@ -1,0 +1,173 @@
+<script>
+
+var cart;
+		
+		// 让localStorage define cart 的存在
+		if(localStorage.accessoryCart!=null) {
+			cart = JSON.parse(localStorage.accessoryCart);
+		} else {
+			cart = [];
+		}
+
+    //var cart = localStorage.accessoryCart!=null?JSON.parse(localStorage.accessoryCart):[];
+		
+		function addCart(title, price, img) {
+		//console.log(title, price, img);
+		
+		// step1: 做array
+		/*  var cart = [];
+			cart = ["iphone 6", "iphone 7", "samsung S7", "samsung S7 edge"]
+			//console.log (cart[]);  */
+			// *** 最后要宣布 var cart; instead of var cart = [], 不然function run一次，cart 就变[]again!!!
+		
+		// step2: 做object
+		/*  var myProduct = {};
+			zmyProduct = {"title":title, "price":price, "img":img, "qty":qty}  */
+		
+		// step3: 把{object} push进 [array] means 把{myProduct} push进 [cart]
+			
+			var myProduct = {};
+	
+		// determine product exist or not
+			var productExist = false;
+			var selectedIndex = 0;
+			for (var i=0; i < cart.length; i++){
+				if (cart[i].title == title){
+					productExist = true;
+					selectedIndex = i;
+					break;
+				}
+			}
+			
+		// if product alr exist in cart
+			if (productExist == true) {
+				cart[selectedIndex].qty++ ;
+				
+		// if product not exist in cart
+			} else {
+				var id = cart.length+1;
+				
+			myProduct = {"id":id, "title":title, "price":price, "img":img, "qty":1};
+			
+			cart.push(myProduct);
+			
+			}
+		
+		console.log(cart);
+		
+		calculateTotalPrice();
+	
+		}	
+		
+		function calculateTotalPrice() {
+			var total = 0;
+			
+			$("#accessoryCart").html('');
+			for (var i=0; i < cart.length; i++) {
+				subtotal = cart[i].price * cart[i].qty;
+				total += subtotal;
+			
+			var tr = "";
+			tr += '<td> '+cart[i].title+' </td>';
+			tr += '<td><a href="javascript:minusCart('+cart[i].id+');" class="btn btn-xs btn-danger">-</a> '+cart[i].qty+' <a href="javascript:plusCart('+cart[i].id+')" class="btn btn-xs btn-danger">+</a></td>';
+			tr += '<td> '+cart[i].price+' </td>';
+			tr += '<td> '+subtotal+' </td>';
+			tr += '<td><a href="javascript:deleteCart('+cart[i].id+')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-trash"></i></a></td>';
+			
+			 var trDOM = $("<tr>").html(tr);
+			$("#accessoryCart").append(trDOM);
+			
+			}
+			
+			 //to put total in between <td id="myTotal"> and </td>
+			$("#myTotal").html(total);
+			
+		localStorage.accessoryCart = JSON.stringify(cart);
+		
+		}
+		
+</script>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+<script>
+		
+		var cart;
+			
+			if(localStorage.accessoryCart!=null) {
+			cart = JSON.parse(localStorage.accessoryCart);
+			} else {
+				cart = [];
+			}
+			
+			var myAccessory = {};
+		
+			function addCart (title,code,price,img) {
+			//console.log(title, code, price, img);
+			
+			//define product exist or not
+				var accessoryExist = false;
+				var selectedIndex = 0;
+				
+				for (var i=0; i < cart.length; i++) {
+					if (cart[i].code == code) {
+						accessoryExist = true;
+						selectedIndex = i;
+						break;
+					}
+				}
+				
+				if (accessoryExist = true) {
+				
+					cart[selectedIndex].qty++;
+					
+				} else {
+				
+					var id = cart.length+1;
+					
+					myAccessory = {"id":id, "title":title, "code":code, "price":price, "img":img, "qty":1};
+					cart.push(myAccessory);
+				}
+			
+			console.log(cart);
+				
+			calculateTotalPrice();	
+			}
+			
+			function calculateTotalPrice() {
+			
+				var total = 0;
+				$('#accessoryCart').html('');
+				
+				for (i=0; i < cart.length; i++) {
+					subtotal = cart[i].price * cart[i].qty;
+					total += subtotal;
+				
+				var tr = "";
+				tr += '<td>' +cart[i].title+ '</td>';
+				tr += '<td>' +cart[i].code+ '</td>';
+				tr += '<td>' +cart[i].qty+ '<td>';
+				tr += '<td>' +cart[i].price+ '<td>';			
+				tr += '<td>' +subtotal+ '<td>';
+				tr += '<td>' +cart[i].id+ '<td>';
+				
+				var trDom = $("<tr>").html(tr);
+				$ ('#accessoryCart').append(trDom);
+				
+				}
+				
+				$("#myTotal").html(total);
+				
+			localStorage.accessoryCart = JSON.stringify(cart);
+			
+			}
+			
+</script>
